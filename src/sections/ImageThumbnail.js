@@ -7,6 +7,7 @@ function ImageThumbnail(props) {
     isActive,
     onMouseEnter = () => {},
     onMouseLeave = () => {},
+    onClick = () => {}
   } = props;
 
   return (
@@ -21,6 +22,7 @@ function ImageThumbnail(props) {
         transform={isActive ? "scale(1.3)" : ""}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onClick={onClick}
       />
     </Box>
   );

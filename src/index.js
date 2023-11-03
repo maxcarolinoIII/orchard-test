@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import { modalTheme } from "./theme/modal";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,6 +15,7 @@ const config = {
 };
 
 const theme = extendTheme({
+  components: { Modal: modalTheme },
   config,
   styles: {
     global: (props) => ({
