@@ -26,26 +26,34 @@ function BodyNeeds() {
       id: 1,
       column: 1,
       src: "/assets/body-needs/Image-01.jpg",
+      srcSet:
+        "/assets/body-needs/Image-01.jpg 384w, /assets/body-needs/Image-01@2x.jpg 768w",
       alt: "Source foods.",
     },
     {
       id: 2,
       column: 2,
       src: "/assets/body-needs/Image-02.jpg",
+      srcSet:
+        "/assets/body-needs/Image-02.jpg 384w, /assets/body-needs/Image-02@2x.jpg 768w",
       alt: "Fresh Ingredients.",
     },
     {
       id: 3,
       column: 2,
       src: "/assets/body-needs/Image-03.jpg",
-      alt: "Healthy organic food",
+      srcSet:
+        "/assets/body-needs/Image-03.jpg 384w, /assets/body-needs/Image-03@2x.jpg 768w",
+      alt: "Healthy organic food.",
     },
   ];
 
   const renderThumbnail = (thumbnail) => {
     return (
       <ImageThumbnail
+        key={thumbnail.id}
         src={thumbnail.src}
+        srcSet={thumbnail.srcSet}
         alt={thumbnail.alt}
         isActive={active === thumbnail.id}
         onMouseEnter={() => setActive(thumbnail.id)}
@@ -60,22 +68,26 @@ function BodyNeeds() {
 
   return (
     <>
-      <Flex gap={6} overflow={"hidden"}>
-        {thumbnails
-          .filter((thumbnail) => thumbnail.column === 1)
-          .map((thumbnail) => renderThumbnail(thumbnail))}
-        <Flex
-          flexDir={"column"}
-          gap={6}
-          h={"100%"}
-          w={"100%"}
-          overflow={"hidden"}
-        >
-          {thumbnails
-            .filter((thumbnail) => thumbnail.column === 2)
-            .map((thumbnail) => renderThumbnail(thumbnail))}
+      <Flex gap={6} overflow={"hidden"} flexDir={{ base: "column", lg: "row" }}>
+        <Flex w={{ base: "100%", lg: "66%" }} gap={6}>
+          <Box w={"100%"}>
+            {thumbnails
+              .filter((thumbnail) => thumbnail.column === 1)
+              .map((thumbnail) => renderThumbnail(thumbnail))}
+          </Box>
+          <Flex
+            flexDir={"column"}
+            gap={6}
+            w={"100%"}
+            overflow={"hidden"}
+            justifyContent={"space-between"}
+          >
+            {thumbnails
+              .filter((thumbnail) => thumbnail.column === 2)
+              .map((thumbnail) => renderThumbnail(thumbnail))}
+          </Flex>
         </Flex>
-        <Box w={"100%"}>
+        <Box w={{ base: "100%", lg: "33%" }}>
           <Heading
             as={"h1"}
             color={"whiteAlpha.800"}

@@ -5,7 +5,7 @@ import BodyNeeds from "./sections/BodyNeeds";
 function App() {
   return (
     <Flex
-      w={"65%"}
+      w={{ base: "90%", lg: "85%", xl: "70%", }}
       mx={"auto"}
       alignItems={"center"}
       justifyContent={"center"}

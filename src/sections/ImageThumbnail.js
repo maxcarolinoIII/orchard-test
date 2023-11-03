@@ -3,6 +3,7 @@ import { Box, Image } from "@chakra-ui/react";
 function ImageThumbnail(props) {
   const {
     src,
+    srcSet,
     alt,
     isActive,
     onMouseEnter = () => {},
@@ -11,10 +12,11 @@ function ImageThumbnail(props) {
   } = props;
 
   return (
-    <Box overflow={"hidden"} w={"100%"} cursor={"pointer"}>
+    <Box overflow={"hidden"} w={"100%"} h={"100%"} cursor={"pointer"}>
       <Image
         fit={"cover"}
         src={src}
+        srcSet={srcSet}
         alt={alt}
         w={"100%"}
         h={"100%"}
