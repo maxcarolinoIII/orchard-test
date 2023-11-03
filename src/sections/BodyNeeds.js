@@ -7,6 +7,7 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
+  ModalFooter,
   ModalHeader,
   ModalOverlay,
   Text,
@@ -123,14 +124,20 @@ function BodyNeeds() {
           </Text>
         </Box>
       </Flex>
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+      <Modal autoFocus={false} onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
-          <ModalHeader />
+          <ModalHeader mb={4} />
           <ModalBody>
-            <Image src={modalImage} />
+            <Image
+              w={"100%"}
+              mx={"auto"}
+              objectFit={"contain"}
+              src={modalImage}
+            />
           </ModalBody>
+          <ModalFooter />
         </ModalContent>
       </Modal>
     </>
