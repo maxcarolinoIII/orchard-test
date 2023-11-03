@@ -1,17 +1,57 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { useState } from "react";
+import ImageThumbnail from "./ImageThumbnail";
 
 function BodyNeeds() {
-  return (
-    <Flex gap={6}>
-      <Image
-        fit={"cover"}
-        src="/assets/body-needs/Image-01.jpg"
-        alt="Source organic foods"
-        w={"100%"}
+  const [active, setActive] = useState(null);
+  const thumbnails = [
+    {
+      id: 1,
+      column: 1,
+      src: "/assets/body-needs/Image-01.jpg",
+      alt: "Source foods.",
+    },
+    {
+      id: 2,
+      column: 2,
+      src: "/assets/body-needs/Image-02.jpg",
+      alt: "Fresh Ingredients.",
+    },
+    {
+      id: 3,
+      column: 2,
+      src: "/assets/body-needs/Image-03.jpg",
+      alt: "Healthy organic food",
+    },
+  ];
+
+  const renderThumbnail = (thumbnail) => {
+    return (
+      <ImageThumbnail
+        src={thumbnail.src}
+        alt={thumbnail.alt}
+        isActive={active == thumbnail.id}
+        onMouseEnter={() => setActive(thumbnail.id)}
+        onMouseLeave={() => setActive(null)}
       />
-      <Flex flexDir={"column"} gap={6} h={"100%"} w={"100%"}>
-        <Image fit={"cover"} src="/assets/body-needs/Image-02.jpg" />
-        <Image fit={"cover"} src="/assets/body-needs/Image-03.jpg" />
+    );
+  };
+
+  return (
+    <Flex gap={6} overflow={"hidden"}>
+      {thumbnails
+        .filter((thumbnail) => thumbnail.column == 1)
+        .map((thumbnail) => renderThumbnail(thumbnail))}
+      <Flex
+        flexDir={"column"}
+        gap={6}
+        h={"100%"}
+        w={"100%"}
+        overflow={"hidden"}
+      >
+        {thumbnails
+          .filter((thumbnail) => thumbnail.column == 2)
+          .map((thumbnail) => renderThumbnail(thumbnail))}
       </Flex>
       <Box w={"100%"}>
         <Heading
