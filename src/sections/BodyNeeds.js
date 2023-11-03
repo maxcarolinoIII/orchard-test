@@ -68,8 +68,12 @@ function BodyNeeds() {
 
   return (
     <>
-      <Flex gap={6} overflow={"hidden"} flexDir={{ base: "column", lg: "row" }}>
-        <Flex w={{ base: "100%", lg: "66%" }} gap={6}>
+      <Flex
+        gap={{ base: 4, md: 6 }}
+        overflow={"hidden"}
+        flexDir={{ base: "column", lg: "row" }}
+      >
+        <Flex w={{ base: "100%", lg: "66%" }} gap={{ base: 4, md: 6 }}>
           <Box w={"100%"}>
             {thumbnails
               .filter((thumbnail) => thumbnail.column === 1)
@@ -77,7 +81,7 @@ function BodyNeeds() {
           </Box>
           <Flex
             flexDir={"column"}
-            gap={6}
+            gap={{ base: 4, md: 6 }}
             w={"100%"}
             overflow={"hidden"}
             justifyContent={"space-between"}
@@ -121,7 +125,7 @@ function BodyNeeds() {
             color={"#D9183B"}
             textTransform={"uppercase"}
             fontWeight={"400"}
-            size={"sm"}
+            size={"md"}
             mb={4}
           >
             Be Mindful
