@@ -5,11 +5,12 @@ import BodyNeeds from "./sections/BodyNeeds";
 function App() {
   return (
     <Flex
-      w={{ base: "90%", lg: "85%", xl: "70%", }}
+      w={{ base: "90%", md: "80%", lg: "85%", xl: "70%" }}
       mx={"auto"}
       alignItems={"center"}
       justifyContent={"center"}
-      h={"100vh"}
+      mt={{ base: 6, md: 0 }}
+      h={{ base: "auto", md: "100vh" }}
     >
       <BodyNeeds />
     </Flex>
