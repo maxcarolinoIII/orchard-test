@@ -93,7 +93,8 @@ function BodyNeeds() {
             fontSize={"xl"}
             fontWeight={"100"}
             lineHeight={"1.6"}
-            mb={14}
+            mb={12}
+            noOfLines={10}
           >
             The way ingredients are sourced affects the way we nourish our
             bodies. Author Mark Schatzer believes our body naturally develops an
@@ -109,7 +110,7 @@ function BodyNeeds() {
             textTransform={"uppercase"}
             fontWeight={"400"}
             size={"sm"}
-            mb={6}
+            mb={4}
           >
             Be Mindful
           </Heading>
@@ -118,6 +119,7 @@ function BodyNeeds() {
             fontSize={"xl"}
             fontWeight={"400"}
             lineHeight={"1.6"}
+            noOfLines={4}
           >
             Sourcing local or organic food is a good way to start being more
             mindful about what you're cooking and eating.
