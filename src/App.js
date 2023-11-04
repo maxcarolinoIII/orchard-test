@@ -9,8 +9,8 @@ function App() {
       mx={"auto"}
       alignItems={"center"}
       justifyContent={"center"}
-      mt={{ base: 6, md: 0 }}
-      h={{ base: "auto", md: "100vh" }}
+      mt={{ base: 6, md: 12, lg: 0 }}
+      h={{ base: "auto", lg: "100vh" }}
     >
       <BodyNeeds />
     </Flex>
