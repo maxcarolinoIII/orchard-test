@@ -10,7 +10,11 @@ function App() {
   ];
 
   return (
-    <>
+    <Flex
+      py={{ base: 12, md: 20, lg: 0 }}
+      gap={{ base: 12, md: 20, lg: 0 }}
+      flexDir={"column"}
+    >
       {sections.map((section, index) => (
         <Flex
           key={index}
@@ -18,13 +22,13 @@ function App() {
           mx={"auto"}
           alignItems={"center"}
           justifyContent={"center"}
-          mt={{ base: 6, md: 12, lg: 0 }}
+          // mt={{ base: 12, md: 20, lg: 0 }}
           h={{ base: "auto", lg: "100vh" }}
         >
           {section.component}
         </Flex>
       ))}
-    </>
+    </Flex>
   );
 }
 

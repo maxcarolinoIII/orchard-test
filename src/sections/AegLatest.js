@@ -37,14 +37,14 @@ function AegLatest() {
       <Heading
         as={"h1"}
         textTransform={"uppercase"}
-        size={"2xl"}
+        size={{ base: "lg", md: "xl", lg: "2xl" }}
         fontWeight={100}
         textAlign={"center"}
-        mb={16}
+        mb={{ base: 8, md: 12, lg: 16 }}
       >
         All the latest from AEG
       </Heading>
-      <Flex gap={6}>
+      <Flex gap={6} flexDir={{ base: "column", lg: "row" }}>
         {links.map((link, index) => (
           <AegLink key={index} {...link} />
         ))}

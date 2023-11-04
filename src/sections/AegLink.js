@@ -5,11 +5,12 @@ function AegLink(props) {
 
   return (
     <Link
+      w={"100%"}
       href={link}
       _hover={{ textDecoration: "none" }}
       onClick={(event) => console.log(event.target)}
     >
-      <Box w={"100%"} data-group>
+      <Box data-group>
         <Image
           src={imageSrc}
           srcSet={imageSrcSet}
@@ -17,7 +18,7 @@ function AegLink(props) {
           _groupHover={{ borderBottom: "4px solid #D9183B" }}
           mb={6}
         />
-        <Heading as={"h2"} size={"md"} fontWeight={400} mb={4}>
+        <Heading as={"h2"} size={"md"} fontWeight={400} mb={4} noOfLines={1}>
           {heading}
         </Heading>
         <Text
