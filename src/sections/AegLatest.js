@@ -40,7 +40,7 @@ function AegLatest() {
         size={{ base: "lg", md: "xl", lg: "2xl" }}
         fontWeight={100}
         textAlign={"center"}
-        mb={{ base: 8, md: 12, lg: 16 }}
+        mb={{ base: 8, md: 20 }}
       >
         All the latest from AEG
       </Heading>
