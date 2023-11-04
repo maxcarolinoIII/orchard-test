@@ -22,7 +22,6 @@ function App() {
           mx={"auto"}
           alignItems={"center"}
           justifyContent={"center"}
-          // mt={{ base: 12, md: 20, lg: 0 }}
           h={{ base: "auto", lg: "100vh" }}
         >
           {section.component}
