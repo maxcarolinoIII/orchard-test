@@ -15,10 +15,18 @@ function AegLink(props) {
           src={imageSrc}
           srcSet={imageSrcSet}
           borderBottom={"4px solid transparent"}
+          transition={"border-bottom 800ms"}
           _groupHover={{ borderBottom: "4px solid #D9183B" }}
           mb={6}
         />
-        <Heading as={"h2"} size={"md"} fontWeight={400} mb={4} noOfLines={1}>
+        <Heading
+          lineHeight={"1.4"}
+          as={"h2"}
+          size={"md"}
+          fontWeight={400}
+          mb={4}
+          noOfLines={1}
+        >
           {heading}
         </Heading>
         <Text
@@ -35,6 +43,7 @@ function AegLink(props) {
           fontWeight={400}
           textTransform={"uppercase"}
           borderBottom={"2px solid transparent"}
+          transition={"border-bottom 800ms"}
           _groupHover={{ borderBottom: "2px solid #D9183B" }}
           w={"fit-content"}
           pb={2}
