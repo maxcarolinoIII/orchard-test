@@ -18,6 +18,7 @@ function AegLink(props) {
           transition={"border-bottom 800ms"}
           _groupHover={{ borderBottom: "4px solid #D9183B" }}
           mb={6}
+          alt={heading}
         />
         <Heading
           lineHeight={"1.4"}
