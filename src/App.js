@@ -12,7 +12,7 @@ function App() {
   return (
     <Flex
       py={{ base: 12, md: 20, lg: 0 }}
-      gap={{ base: 12, md: 20, lg: 0 }}
+      gap={{ base: 20, lg: 0 }}
       flexDir={"column"}
     >
       {sections.map((section, index) => (
